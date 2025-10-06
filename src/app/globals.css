@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #e5e5e5;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 🌌 Futuristic animated grid background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(transparent 97%, rgba(0, 255, 255, 0.15) 100%),
+    linear-gradient(90deg, transparent 97%, rgba(0, 255, 255, 0.15) 100%);
+  background-size: 40px 40px;
+  animation: gridmove 10s linear infinite;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+/* 💡 Neon text glow */
+.glow {
+  text-shadow:
+    0 0 8px #00ffff,
+    0 0 16px #00ffff,
+    0 0 24px #00ffff;
+}
+
+/* ✨ Glowing section borders */
+.glow-border {
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-border:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+/* 🔽 Smooth scroll + custom scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.4);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.7);
+}
+
+/* 🔁 Animations (for background + glowing effects) */
+@keyframes gridmove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 80px;
+  }
+}
+
+@keyframes glowpulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+  }
 }
