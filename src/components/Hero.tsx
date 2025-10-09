@@ -56,7 +56,7 @@ export default function Hero() {
         </p>
 
         <a
-          href="#projects"
+          href="#about"
           className="mt-8 inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-3 rounded-lg transition shadow-lg shadow-cyan-500/30"
         >
           Explore My Portfolio
