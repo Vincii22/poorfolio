@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function About() {
@@ -14,10 +15,13 @@ export default function About() {
         {/* ---------- 1️⃣ Profile Image ---------- */}
         <div className="flex justify-center md:justify-start w-full md:w-1/5">
           <div className="relative">
-            <img
+            <Image
               src="/profile.jpg"
               alt="Profile"
+              width={300}
+              height={380}
               className="rounded-lg w-[300px] h-[380px] object-cover shadow-[0_0_60px_rgba(0,255,255,0.4)] border-4 border-cyan-400/70"
+              priority
             />
             <div className="absolute inset-0 rounded-lg animate-pulse bg-cyan-400/10 blur-md"></div>
           </div>
