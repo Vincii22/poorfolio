@@ -76,36 +76,49 @@ export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     // --- Updated Project Data with fullDesc and link ---
-    const dataProjects: Project[] = [
-      {
-        title: "ETL Pipeline with PostgreSQL & Docker",
-        desc: "Developed a robust ETL pipeline using Python and Dockerized PostgreSQL.",
-        fullDesc: "This project involved designing and building a fully automated Extract, Transform, Load (ETL) pipeline. Python scripts handled data extraction and transformation logic, while Docker was used to containerize the PostgreSQL database and the Python environment for guaranteed portability and reproducibility. Key features included error logging, incremental loading, and performance optimization for large datasets.",
-        link: "https://github.com/project-link-1", 
-        tech: ["Python", "PostgreSQL", "Docker"],
-      },
-      {
-        title: "ETL Pipeline with PostgreSQL & Docker",
-        desc: "Developed a robust ETL pipeline using Python and Dockerized PostgreSQL.",
-        fullDesc: "A duplicate project demonstrating consistency in architecture. The focus here was refining the data quality checks and setting up a continuous integration/continuous deployment (CI/CD) workflow for the data transformation logic.",
-        link: "https://github.com/project-link-2", 
-        tech: ["Python", "PostgreSQL", "Docker"],
-      },
-      {
-        title: "Data Orchestration with Airflow & dbt",
-        desc: "Automated complex data transformations using Apache Airflow and dbt.",
-        fullDesc: "Implemented a Directed Acyclic Graph (DAG) using Apache Airflow to schedule and monitor complex data workflows. Dbt (data build tool) was integrated to manage SQL-based transformations, enabling version control, testing, and documentation of the data models directly within the warehouse.",
-        link: "https://github.com/project-link-3", 
-        tech: ["Airflow", "dbt", "Python"],
-      },
-      {
-        title: "Cloud Data Pipeline with Snowflake & AWS",
-        desc: "Built scalable data ingestion on AWS integrated with Snowflake.",
-        fullDesc: "Architected a serverless data pipeline leveraging AWS services (S3 for storage, Lambda for event-driven processing, and SQS for queuing) to ingest streaming and batch data into a Snowflake data warehouse. The design prioritized scalability, low latency, and cost efficiency in the cloud environment.",
-        link: "https://github.com/project-link-4", 
-        tech: ["Snowflake", "AWS", "Lambda"],
-      },
-    ];
+const dataProjects: Project[] = [
+  {
+    title: "Modern ELT Pipeline for Movie Analytics",
+    desc: "Automated data ingestion and transformation using Airbyte, Airflow, and dbt.",
+    fullDesc:
+      "Built a modern ELT pipeline leveraging Docker, Airflow, Airbyte, dbt, and PostgreSQL to automate data ingestion, transformation, and orchestration for a scalable movie analytics platform.",
+    link: "https://github.com/project-link-1", // Update as needed
+    tech: ["Docker", "Airflow", "Airbyte", "dbt", "PostgreSQL"],
+  },
+  {
+    title: "End-to-End Retail ETL Pipeline",
+    desc: "Automated retail sales data processing with PySpark and PostgreSQL.",
+    fullDesc:
+      "Designed and automated a full data pipeline to clean, enrich, and load retail sales data, eliminating manual processing.",
+    link: "https://github.com/project-link-2", // Update as needed
+    tech: ["PySpark", "PostgreSQL"],
+  },
+  {
+    title: "Healthcare Cost Analysis ETL Pipeline",
+    desc: "Scalable CSV ingestion with Airflow, dbt, and Pandas.",
+    fullDesc:
+      "Automated a complete batch ETL pipeline (Airflow, dbt, Pandas) for CSV ingestion and transformation, enabling scalable warehouse modeling for healthcare cost analysis.",
+    link: "https://github.com/project-link-3", // Update as needed
+    tech: ["Airflow", "dbt", "Pandas"],
+  },
+  {
+    title: "Real-Time User Activity Analytics Pipeline",
+    desc: "Sub-minute analytics using Kafka, Spark Streaming, and FastAPI.",
+    fullDesc:
+      "Built a real-time user activity pipeline with Kafka, Spark Streaming, and FastAPI to deliver windowed analytics with sub-minute latency via REST APIs.",
+    link: "https://github.com/project-link-4", // Update as needed
+    tech: ["Kafka", "Spark Streaming", "FastAPI"],
+  },
+  {
+    title: "Real-Time Ride Demand Analytics Pipeline",
+    desc: "Low-latency surge detection using Spark Structured Streaming.",
+    fullDesc:
+      "Built a real-time ride demand tracking pipeline using Kafka, Spark Structured Streaming, and FastAPI to deliver location-based surge detection and demand analytics with low-latency REST APIs.",
+    link: "https://github.com/project-link-5", // Update as needed
+    tech: ["Kafka", "Spark Structured Streaming", "FastAPI"],
+  },
+];
+
 
     const backendProjects: Project[] = [
       {
