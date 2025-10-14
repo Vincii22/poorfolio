@@ -120,36 +120,57 @@ const dataProjects: Project[] = [
 ];
 
 
-    const backendProjects: Project[] = [
-      {
-        title: "RESTful API with Node.js & Express",
-        desc: "Built secure REST APIs with authentication, rate limiting, and error handling.",
-        fullDesc: "Developed a high-performance RESTful API using Node.js and the Express framework. Features included JSON Web Token (JWT) based authentication, granular role-based access control, a comprehensive request rate-limiting middleware, and centralized error handling for production readiness.",
-        link: "https://github.com/project-link-5", 
-        tech: ["Node.js", "Express", "JWT"],
-      },
-      {
-        title: "RESTful API with Node.js & Express",
-        desc: "Built secure REST APIs with authentication, rate limiting, and error handling.",
-        fullDesc: "A second iteration focusing on integrating external services and utilizing caching mechanisms (like Redis) to reduce database load and improve API response times under high concurrency.",
-        link: "https://github.com/project-link-6", 
-        tech: ["Node.js", "Express", "JWT"],
-      },
-      {
-        title: "Microservice Architecture with Docker & Nginx",
-        desc: "Designed modular backend systems deployed via containerized services.",
-        fullDesc: "Refactored a monolithic application into several decoupled microservices. Docker was used for containerization, and Docker Compose managed the multi-container deployment. Nginx served as a reverse proxy for load balancing and routing requests to the appropriate services, ensuring high availability and resilience.",
-        link: "https://github.com/project-link-7", 
-        tech: ["Docker", "Nginx", "Redis"],
-      },
-      {
-        title: "Fullstack Integration with MySQL",
-        desc: "Created backend services powering an admin dashboard for record management.",
-        fullDesc: "Developed the full backend stack for an internal admin dashboard. Used MySQL for the primary database, Express.js for the API layer, and Sequelize as the ORM (Object-Relational Mapper) to manage database interactions, focusing on CRUD (Create, Read, Update, Delete) operations with efficient queries.",
-        link: "https://github.com/project-link-8", 
-        tech: ["MySQL", "Express", "Sequelize"],
-      },
-    ];
+const backendProjects: Project[] = [
+  {
+    title: "Library Management System with RFID Scanning",
+    desc: "Digitized library workflows with RFID-based book tracking.",
+    fullDesc:
+      "Developed a backend system for managing book inventories, borrowing, and returns using RFID scanning technology. Built with PHP and MySQL, the system provides secure login, real-time inventory updates, and streamlined user interaction through a responsive frontend.",
+    link: "https://github.com/project-link-1", // Replace with actual link
+    tech: ["PHP", "HTML", "CSS", "MySQL"],
+  },
+  {
+    title: "Document Tracking and Workflow System",
+    desc: "Streamlined document flow using PHP and MySQL backend logic.",
+    fullDesc:
+      "Implemented a workflow system to track the movement and approval status of official documents within an organization. Designed with PHP and MySQL, the system supports user roles, activity logs, and secure file handling.",
+    link: "https://github.com/project-link-2", // Replace with actual link
+    tech: ["PHP", "HTML", "CSS", "MySQL"],
+  },
+  {
+    title: "Evaluation and Grading Management System",
+    desc: "Automated grading with Laravel and modern frontend stack.",
+    fullDesc:
+      "Created a backend system for academic institutions to manage student evaluations, grade inputs, and reports. Built with Laravel and TailwindCSS, it supports dynamic input validation, user authentication, and PDF grade sheet generation.",
+    link: "https://github.com/project-link-3", // Replace with actual link
+    tech: ["Laravel", "PHP", "HTML", "CSS", "Tailwind", "JavaScript", "MySQL"],
+  },
+  {
+    title: "Automated Organization Management System with Barcode Scanning",
+    desc: "Enabled barcode-based organization tracking and automation.",
+    fullDesc:
+      "Developed an internal platform for managing organizations, members, and events using barcode scanners. The backend, built with Laravel and MySQL, processes member check-ins, tracks event participation, and provides detailed analytics via a modern frontend.",
+    link: "https://github.com/project-link-4", // Replace with actual link
+    tech: ["Laravel", "Tailwind", "JavaScript", "MySQL"],
+  },
+  {
+    title: "Filipino Sign Language Website with Machine Learning Integration",
+    desc: "Built an accessible platform powered by machine learning.",
+    fullDesc:
+      "Designed a learning platform that teaches Filipino Sign Language, integrating machine learning for gesture recognition. Laravel powers the backend, while the frontend offers an interactive and inclusive experience for users.",
+    link: "https://github.com/project-link-5", // Replace with actual link
+    tech: ["Laravel", "HTML", "CSS", "JavaScript", "MySQL", "Machine Learning"],
+  },
+  {
+    title: "Virtual Learning Environment for Individuals with Dyslexia",
+    desc: "Inclusive platform leveraging AI for learning support.",
+    fullDesc:
+      "Created a virtual learning environment specifically tailored for individuals with dyslexia. The system uses Laravel for backend operations and integrates TensorFlow and Python-based models to offer personalized learning aids and improved content accessibility.",
+    link: "https://github.com/project-link-6", // Replace with actual link
+    tech: ["Laravel", "JavaScript", "HTML", "CSS", "TensorFlow", "Python", "MySQL"],
+  },
+];
+
 
     const projects = category === "data" ? dataProjects : backendProjects;
 
