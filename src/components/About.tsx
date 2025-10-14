@@ -53,7 +53,7 @@ export default function About() {
             <p className="flex items-center gap-3">
               <FaLinkedin className="text-cyan-400 text-xl" />
               <a
-                href="https://linkedin.com/in/arvinmilan"
+                href="https://www.linkedin.com/in/arvin-milan-86b739372/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-cyan-300 transition"
