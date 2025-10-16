@@ -6,16 +6,16 @@ import { FaGithub } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// --- Types ---
+// --- Types (Unchanged) ---
 type Project = {
     title: string;
     desc: string;
-    fullDesc: string; // New: Full description for the modal
-    link: string;     // New: Project link for the icon
+    fullDesc: string; 
+    link: string;    
     tech: string[];
 };
 
-// --- Modal Component ---
+// --- Modal Component (Unchanged) ---
 const ProjectModal = ({ project, onClose }: { project: Project | null, onClose: () => void }) => {
     if (!project) return null;
 
@@ -72,109 +72,108 @@ const ProjectModal = ({ project, onClose }: { project: Project | null, onClose: 
 // --- Projects Component ---
 export default function Projects() {
     const [category, setCategory] = useState<"data" | "backend">("data"); 
-    // New State for Modal
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-    // --- Updated Project Data with fullDesc and link ---
+    // --- Project Data (Unchanged) ---
 const dataProjects: Project[] = [
-  {
-    title: "Modern ELT Pipeline for Movie Analytics",
-    desc: "Automated data ingestion and transformation using Airbyte, Airflow, and dbt.",
-    fullDesc:
-      "Built a modern ELT pipeline leveraging Docker, Airflow, Airbyte, dbt, and PostgreSQL to automate data ingestion, transformation, and orchestration for a scalable movie analytics platform.",
-    link: "https://github.com/project-link-1", // Update as needed
-    tech: ["Docker", "Airflow", "Airbyte", "dbt", "PostgreSQL"],
-  },
-  {
-    title: "End-to-End Retail ETL Pipeline",
-    desc: "Automated retail sales data processing with PySpark and PostgreSQL.",
-    fullDesc:
-      "Designed and automated a full data pipeline to clean, enrich, and load retail sales data, eliminating manual processing.",
-    link: "https://github.com/project-link-2", // Update as needed
-    tech: ["PySpark", "PostgreSQL"],
-  },
-  {
-    title: "Healthcare Cost Analysis ETL Pipeline",
-    desc: "Scalable CSV ingestion with Airflow, dbt, and Pandas.",
-    fullDesc:
-      "Automated a complete batch ETL pipeline (Airflow, dbt, Pandas) for CSV ingestion and transformation, enabling scalable warehouse modeling for healthcare cost analysis.",
-    link: "https://github.com/project-link-3", // Update as needed
-    tech: ["Airflow", "dbt", "Pandas"],
-  },
-  {
-    title: "Real-Time User Activity Analytics Pipeline",
-    desc: "Sub-minute analytics using Kafka, Spark Streaming, and FastAPI.",
-    fullDesc:
-      "Built a real-time user activity pipeline with Kafka, Spark Streaming, and FastAPI to deliver windowed analytics with sub-minute latency via REST APIs.",
-    link: "https://github.com/project-link-4", // Update as needed
-    tech: ["Kafka", "Spark Streaming", "FastAPI"],
-  },
-  {
-    title: "Real-Time Ride Demand Analytics Pipeline",
-    desc: "Low-latency surge detection using Spark Structured Streaming.",
-    fullDesc:
-      "Built a real-time ride demand tracking pipeline using Kafka, Spark Structured Streaming, and FastAPI to deliver location-based surge detection and demand analytics with low-latency REST APIs.",
-    link: "https://github.com/project-link-5", // Update as needed
-    tech: ["Kafka", "Spark Structured Streaming", "FastAPI"],
-  },
+    {
+      title: "Modern ELT Pipeline for Movie Analytics",
+      desc: "Automated data ingestion and transformation using Airbyte, Airflow, and dbt.",
+      fullDesc:
+        "Built a modern ELT pipeline leveraging Docker, Airflow, Airbyte, dbt, and PostgreSQL to automate data ingestion, transformation, and orchestration for a scalable movie analytics platform.",
+      link: "https://github.com/project-link-1", 
+      tech: ["Docker", "Airflow", "Airbyte", "dbt", "PostgreSQL"],
+    },
+    {
+      title: "End-to-End Retail ETL Pipeline",
+      desc: "Automated retail sales data processing with PySpark and PostgreSQL.",
+      fullDesc:
+        "Designed and automated a full data pipeline to clean, enrich, and load retail sales data, eliminating manual processing.",
+      link: "https://github.com/project-link-2", 
+      tech: ["PySpark", "PostgreSQL"],
+    },
+    {
+      title: "Healthcare Cost Analysis ETL Pipeline",
+      desc: "Scalable CSV ingestion with Airflow, dbt, and Pandas.",
+      fullDesc:
+        "Automated a complete batch ETL pipeline (Airflow, dbt, Pandas) for CSV ingestion and transformation, enabling scalable warehouse modeling for healthcare cost analysis.",
+      link: "https://github.com/project-link-3", 
+      tech: ["Airflow", "dbt", "Pandas"],
+    },
+    {
+      title: "Real-Time User Activity Analytics Pipeline",
+      desc: "Sub-minute analytics using Kafka, Spark Streaming, and FastAPI.",
+      fullDesc:
+        "Built a real-time user activity pipeline with Kafka, Spark Streaming, and FastAPI to deliver windowed analytics with sub-minute latency via REST APIs.",
+      link: "https://github.com/project-link-4", 
+      tech: ["Kafka", "Spark Streaming", "FastAPI"],
+    },
+    {
+      title: "Real-Time Ride Demand Analytics Pipeline",
+      desc: "Low-latency surge detection using Spark Structured Streaming.",
+      fullDesc:
+        "Built a real-time ride demand tracking pipeline using Kafka, Spark Structured Streaming, and FastAPI to deliver location-based surge detection and demand analytics with low-latency REST APIs.",
+      link: "https://github.com/project-link-5", 
+      tech: ["Kafka", "Spark Structured Streaming", "FastAPI"],
+    },
 ];
 
 
 const backendProjects: Project[] = [
-  {
-    title: "Library Management System with RFID Scanning",
-    desc: "Digitized library workflows with RFID-based book tracking.",
-    fullDesc:
-      "Developed a backend system for managing book inventories, borrowing, and returns using RFID scanning technology. Built with PHP and MySQL, the system provides secure login, real-time inventory updates, and streamlined user interaction through a responsive frontend.",
-    link: "https://github.com/project-link-1", // Replace with actual link
-    tech: ["PHP", "HTML", "CSS", "MySQL"],
-  },
-  {
-    title: "Document Tracking and Workflow System",
-    desc: "Streamlined document flow using PHP and MySQL backend logic.",
-    fullDesc:
-      "Implemented a workflow system to track the movement and approval status of official documents within an organization. Designed with PHP and MySQL, the system supports user roles, activity logs, and secure file handling.",
-    link: "https://github.com/project-link-2", // Replace with actual link
-    tech: ["PHP", "HTML", "CSS", "MySQL"],
-  },
-  {
-    title: "Evaluation and Grading Management System",
-    desc: "Automated grading with Laravel and modern frontend stack.",
-    fullDesc:
-      "Created a backend system for academic institutions to manage student evaluations, grade inputs, and reports. Built with Laravel and TailwindCSS, it supports dynamic input validation, user authentication, and PDF grade sheet generation.",
-    link: "https://github.com/project-link-3", // Replace with actual link
-    tech: ["Laravel", "PHP", "HTML", "CSS", "Tailwind", "JavaScript", "MySQL"],
-  },
-  {
-    title: "Automated Organization Management System with Barcode Scanning",
-    desc: "Enabled barcode-based organization tracking and automation.",
-    fullDesc:
-      "Developed an internal platform for managing organizations, members, and events using barcode scanners. The backend, built with Laravel and MySQL, processes member check-ins, tracks event participation, and provides detailed analytics via a modern frontend.",
-    link: "https://github.com/project-link-4", // Replace with actual link
-    tech: ["Laravel", "Tailwind", "JavaScript", "MySQL"],
-  },
-  {
-    title: "Filipino Sign Language Website with Machine Learning Integration",
-    desc: "Built an accessible platform powered by machine learning.",
-    fullDesc:
-      "Designed a learning platform that teaches Filipino Sign Language, integrating machine learning for gesture recognition. Laravel powers the backend, while the frontend offers an interactive and inclusive experience for users.",
-    link: "https://github.com/project-link-5", // Replace with actual link
-    tech: ["Laravel", "HTML", "CSS", "JavaScript", "MySQL", "Machine Learning"],
-  },
-  {
-    title: "Virtual Learning Environment for Individuals with Dyslexia",
-    desc: "Inclusive platform leveraging AI for learning support.",
-    fullDesc:
-      "Created a virtual learning environment specifically tailored for individuals with dyslexia. The system uses Laravel for backend operations and integrates TensorFlow and Python-based models to offer personalized learning aids and improved content accessibility.",
-    link: "https://github.com/project-link-6", // Replace with actual link
-    tech: ["Laravel", "JavaScript", "HTML", "CSS", "TensorFlow", "Python", "MySQL"],
-  },
+    {
+      title: "Library Management System with RFID Scanning",
+      desc: "Digitized library workflows with RFID-based book tracking.",
+      fullDesc:
+        "Developed a backend system for managing book inventories, borrowing, and returns using RFID scanning technology. Built with PHP and MySQL, the system provides secure login, real-time inventory updates, and streamlined user interaction through a responsive frontend.",
+      link: "https://github.com/project-link-1", 
+      tech: ["PHP", "HTML", "CSS", "MySQL"],
+    },
+    {
+      title: "Document Tracking and Workflow System",
+      desc: "Streamlined document flow using PHP and MySQL backend logic.",
+      fullDesc:
+        "Implemented a workflow system to track the movement and approval status of official documents within an organization. Designed with PHP and MySQL, the system supports user roles, activity logs, and secure file handling.",
+      link: "https://github.com/project-link-2", 
+      tech: ["PHP", "HTML", "CSS", "MySQL"],
+    },
+    {
+      title: "Evaluation and Grading Management System",
+      desc: "Automated grading with Laravel and modern frontend stack.",
+      fullDesc:
+        "Created a backend system for academic institutions to manage student evaluations, grade inputs, and reports. Built with Laravel and TailwindCSS, it supports dynamic input validation, user authentication, and PDF grade sheet generation.",
+      link: "https://github.com/project-link-3", 
+      tech: ["Laravel", "PHP", "HTML", "CSS", "Tailwind", "JavaScript", "MySQL"],
+    },
+    {
+      title: "Automated Organization Management System with Barcode Scanning",
+      desc: "Enabled barcode-based organization tracking and automation.",
+      fullDesc:
+        "Developed an internal platform for managing organizations, members, and events using barcode scanners. The backend, built with Laravel and MySQL, processes member check-ins, tracks event participation, and provides detailed analytics via a modern frontend.",
+      link: "https://github.com/project-link-4", 
+      tech: ["Laravel", "Tailwind", "JavaScript", "MySQL"],
+    },
+    {
+      title: "Filipino Sign Language Website with Machine Learning Integration",
+      desc: "Built an accessible platform powered by machine learning.",
+      fullDesc:
+        "Designed a learning platform that teaches Filipino Sign Language, integrating machine learning for gesture recognition. Laravel powers the backend, while the frontend offers an interactive and inclusive experience for users.",
+      link: "https://github.com/project-link-5", 
+      tech: ["Laravel", "HTML", "CSS", "JavaScript", "MySQL", "Machine Learning"],
+    },
+    {
+      title: "Virtual Learning Environment for Individuals with Dyslexia",
+      desc: "Inclusive platform leveraging AI for learning support.",
+      fullDesc:
+        "Created a virtual learning environment specifically tailored for individuals with dyslexia. The system uses Laravel for backend operations and integrates TensorFlow and Python-based models to offer personalized learning aids and improved content accessibility.",
+      link: "https://github.com/project-link-6", 
+      tech: ["Laravel", "JavaScript", "HTML", "CSS", "TensorFlow", "Python", "MySQL"],
+    },
 ];
 
 
     const projects = category === "data" ? dataProjects : backendProjects;
 
-    // Slider settings (Original design preserved)
+    // Slider settings (Unchanged)
     const settings = {
       dots: true,
       infinite: true,
@@ -194,9 +193,9 @@ const backendProjects: Project[] = [
     return (
       <section
         id="projects"
-        className="relative w-full min-h-screen flex flex-col items-center justify-center px-16 text-gray-300 bg-[#050816] overflow-hidden"
+        className="relative w-full min-h-screen flex flex-col items-center justify-center px-8 text-gray-300 bg-[#050816] overflow-hidden"
       >
-        {/* MODAL IS HERE */}
+        {/* MODAL IS HERE (Unchanged) */}
         <ProjectModal 
             project={selectedProject} 
             onClose={() => setSelectedProject(null)} 
@@ -236,20 +235,26 @@ const backendProjects: Project[] = [
         </div>
 
         {/* Slider */}
-        <div className="w-full max-w-6xl relative z-10">
+        <div className="w-full max-w-7xl relative z-10">
           <Slider {...settings}>
+            {/* Using index + 1 for the project number */}
             {projects.map((p, i) => (
               <div 
                   key={i} 
                   className="px-4"
               >
                 <div
-                  onClick={() => setSelectedProject(p)} // 👈 MODAL OPENER
+                  onClick={() => setSelectedProject(p)} 
                   className="group relative border-4 border-cyan-400/30 rounded-2xl p-8 bg-[#0b0e18] hover:bg-[#0e1324] 
-                             hover:border-cyan-400/50 transition-all duration-300 shadow-[0_0_30px_rgba(0,255,255,0.1)] cursor-pointer min-h-[400px]"
+                             hover:border-cyan-400/50 transition-all duration-300 shadow-[0_0_30px_rgba(0,255,255,0.1)] cursor-pointer h-[450px]"
                 >
                   {/* Glowing hover overlay (Unchanged) */}
                   <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl bg-cyan-400/10 transition duration-500"></div>
+
+                  {/* 🚀 CHANGE: Smaller and repositioned Project Number Indicator */}
+                  <div className="absolute top-3 left-3 bg-cyan-400 text-black rounded-full w-8 h-8 flex items-center justify-center text-lg font-extrabold shadow-lg z-20">
+                    {i + 1} 
+                  </div>
 
                   {/* Project Preview & Link/Icon */}
                   <div className="relative z-10 mb-6 h-40 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-lg flex items-center justify-center text-cyan-400 text-sm font-mono">
@@ -292,4 +297,4 @@ const backendProjects: Project[] = [
         </div>
       </section>
     );
- }
+}
