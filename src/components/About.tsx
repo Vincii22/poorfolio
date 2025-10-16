@@ -43,8 +43,6 @@ export default function About() {
 
           <p className="text-gray-300 text-base md:text-lg leading-relaxed">
             I specialize in building scalable backend systems using technologies like Node.js, Express, Laravel, FastAPI (Python), PostgreSQL, and MySQL. I enjoy creating robust APIs, optimizing performance, and designing architecture that scales efficiently.
-            <br /><br />
-            Alongside backend development, I&rsquo;m also passionate about data engineering — working with tools like Apache Airflow, dbt, and AWS to automate workflows and enable intelligent, data-driven systems. I see both domains as essential parts of building reliable modern software.
           </p>
 
           {/* Links */}
@@ -87,8 +85,8 @@ export default function About() {
             I&rsquo;m a backend developer who thrives on solving complex problems and building systems that just work. From designing RESTful APIs to maintaining clean database schemas and deploying microservices, I focus on reliability and maintainability.
           </p>
           
-          <p className="text-base text-gray-300 leading-relaxed mt-10">
-            I&rsquo;m also deeply interested in data engineering — especially the challenge of designing data pipelines and infrastructure that enable analytics and automation at scale. I believe in writing code that not only works today but scales with tomorrow&rsquo;s data.
+          <p className="text-base text-gray-300 leading-relaxed mt-6">
+           Alongside backend development, I&rsquo;m also passionate about data engineering — working with tools like Apache Airflow, dbt, and AWS to automate workflows and enable intelligent, data-driven systems. I see both domains as essential parts of building reliable modern software.
           </p>
 
           <p className="text-sm text-gray-400 mt-4">
