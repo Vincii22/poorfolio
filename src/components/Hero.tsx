@@ -48,7 +48,7 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-lg md:text-2xl text-gray-300 mt-4">
-           Associate Data Engineer
+           Backend Developer | Aspiring Data Engineer 
         </h2>
 
         <p className="text-gray-400 max-w-2xl mx-auto mt-6">
