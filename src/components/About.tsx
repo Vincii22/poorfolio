@@ -34,18 +34,17 @@ export default function About() {
               Arvin Milan
             </h3>
             <p className="text-gray-400 text-sm mt-1">
-              Associate Data Engineer • Philippines
+              Backend Developer • Aspiring Data Engineer • Philippines
             </p>
             <p className="text-gray-400 text-sm italic mt-2">
-              “Building intelligent systems with data-driven insights.”
+              “Bridging systems and data through clean, scalable code.”
             </p>
           </div>
 
           <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-            I specialize in designing and automating data pipelines that ensure
-            scalability, reliability, and efficiency across distributed systems.
-            My focus lies in leveraging data engineering tools like Airflow,
-            dbt, and AWS to drive analytics and automation workflows.
+            I specialize in building scalable backend systems using technologies like Node.js, Express, Laravel, FastAPI (Python), PostgreSQL, and MySQL. I enjoy creating robust APIs, optimizing performance, and designing architecture that scales efficiently.
+            <br /><br />
+            Alongside backend development, I’m also passionate about data engineering — working with tools like Apache Airflow, dbt, and AWS to automate workflows and enable intelligent, data-driven systems. I see both domains as essential parts of building reliable modern software.
           </p>
 
           {/* Links */}
@@ -84,15 +83,16 @@ export default function About() {
         {/* ---------- 3️⃣ About Me ---------- */}
         <div className="md:w-1/3 md:pl-10 md:border-l border-cyan-400/20">
           <h4 className="text-cyan-400 font-semibold text-xl">About Me</h4>
-          <p className="text-base text-gray-300 leading-relaxed">
-            You’re viewing an overview of who I am — a data engineer with a
-            passion for structure, automation, and optimization. My journey is
-            guided by curiosity and a drive to craft data-driven solutions that
-            empower decision-making.
+          <p className="text-base text-gray-300 leading-relaxed mt-10">
+            I’m a backend developer who thrives on solving complex problems and building systems that just work. From designing RESTful APIs to maintaining clean database schemas and deploying microservices, I focus on reliability and maintainability.
           </p>
-          <p className="text-sm text-gray-400">
-            I believe every workflow can be refined — every system made more
-            intelligent.
+          
+          <p className="text-base text-gray-300 leading-relaxed mt-10">
+            I’m also deeply interested in data engineering — especially the challenge of designing data pipelines and infrastructure that enable analytics and automation at scale. I believe in writing code that not only works today but scales with tomorrow’s data.
+          </p>
+
+          <p className="text-sm text-gray-400 mt-4">
+            Outside of work and studying, you'll find me playing guitar, diving into strategy games, enjoying a good drink, and then — often — jumping right back into code. I believe a clear mind and good balance fuel creativity and strong development.
           </p>
         </div>
       </div>
